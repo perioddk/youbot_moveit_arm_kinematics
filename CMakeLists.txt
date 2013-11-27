@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(youbot_kinematics)
+project(youbot_moveit_arm_kinematics)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -89,7 +89,7 @@ find_package(Boost REQUIRED thread)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-  LIBRARIES youbot_kinematics
+  LIBRARIES youbot_moveit_arm_kinematics
   CATKIN_DEPENDS moveit_core
   DEPENDS system_lib
 )
@@ -161,7 +161,7 @@ install(TARGETS ${MOVEIT_LIB_NAME} LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DEST
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
  install(FILES
-   youbot_moveit_plugins.xml
+   youbot_moveit_arm_kinematics.xml
    DESTINATION 
    ${CATKIN_PACKAGE_SHARE_DESTINATION}
  )
